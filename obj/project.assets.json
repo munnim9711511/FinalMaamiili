@@ -11755,23 +11755,23 @@
     ]
   },
   "packageFolders": {
-    "/home/munnim/.nuget/packages/": {},
+    "/root/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/munnim/Desktop/Maa/Coun.csproj",
+      "projectUniqueName": "/home/count1/Coun.csproj",
       "projectName": "Coun",
-      "projectPath": "/home/munnim/Desktop/Maa/Coun.csproj",
-      "packagesPath": "/home/munnim/.nuget/packages/",
-      "outputPath": "/home/munnim/Desktop/Maa/obj/",
+      "projectPath": "/home/count1/Coun.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/home/count1/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/munnim/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
