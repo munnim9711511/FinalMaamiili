@@ -4,72 +4,159 @@ ViewData["Title"] = "Home Page";
 
 }
 
-
-
-
-
-<div class="slider">
-
-    <ul class="slides">
-
-        @if (ViewBag.slider !=null)
-
-        {
-
-        @foreach (var item in ViewBag.slider)
-
-        {
-
-        <li>
-
-        <img src="~/slideImage/@item.ImgUrl" class="responsive-img">
-
-
-
-         
-
-        </li>
-
-        }
-
-        }
-
-
-
-    </ul>
-
-</div>
+<div class="container">
 
 
 
 
 
-<div class="container center-align">
+    <!-- <div class="slider">
+
+        <ul class="slides">
+
+            @if (ViewBag.slider !=null)
+
+            {
+
+            @foreach (var item in ViewBag.slider)
+
+            {
+
+            <li>
+
+                <img src="~/slideImage/@item.ImgUrl" class="responsive-img">
+
+
+
+
+
+            </li>
+
+            }
+
+            }
+
+
+
+        </ul>
+
+    </div> -->
+
+
+
+
+
+
 
     <div class="row">
+        <br>
 
-        <div class="col  s12 right">
+        <div class="col  m5 s12 right">
 
-
-
+            @if (ViewBag.news != null)
+            {
             @foreach (var item in ViewBag.news)
 
             {
 
-            <div class="row">
 
-                <div class="col m8 s12"><img src="~/newsImage/@item.ImgUrl" class="responsive-img" style="width: 600px;height: 325px;"></div>
 
-                <div class="col m4 s12 right-align" style="padding: 5px;"><a class="dh right-align" style="font-size: 25px;"
+            <div class="col m12 s12"><img src="~/newsImage/@item.ImgUrl" class=" responsive-img" style="width: 600px;height: 325px;"></div>
 
-                    href="@Url.Action("Index", "News",new{id=@item.Id})">@item.Title</a></div>
+            <div class="col s12 right-align" style="padding: 5px;"><a class="dh right-align" style="font-size: 29px;font-weight: bolder;"
+                    href="@Url.Action(" Index","News",new{id=@item.Id})">@item.Title</a>
+                <br>
+                <span class=" right-align blue-grey-text " style="direction: rtl"> @item.Date <i class="material-icons">date_range</i></span>
 
             </div>
 
 
 
+
+
+            }
             }
 
+
+
+        </div>
+        <div class="col m4 s12 right">
+            @if (ViewBag.ImportantNews != null)
+            {
+            @foreach (var item in ViewBag.ImportantNews)
+
+            {
+            <div class="row">
+                <div class="col m6 s6 right" style="padding-top: 6px;">
+                    <img src="~/newsImage/@item.ImgUrl" class="" style="width: 100%;height: 15%">
+
+                </div>
+                <div class="col m6 s6">
+                    <a href="@Url.Action(" Index","News",new{id=@item.Id})" class="right dh" style="direction: rtl; font-size: 17px;font-weight: bolder;">@item.Title</a>
+
+                    <span class="blue-grey-text  right-align" style="direction: rtl"> @item.Date <i class="material-icons">date_range</i></span>
+
+                </div>
+
+            </div>
+
+
+            }
+            }
+
+        </div>
+        <div class="col m3 s12" style="border: 1px solid green;border-radius: 15px;">
+            <div class="right-align dh">
+                <h6>
+                    ފެރީގެ ޙިދުމަތް
+                </h6>
+                <hr>
+                <ul>
+                    <li class="dh" style="direction: rtl;">
+                        ފެރީގެ ނަން :
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        ފޯން ނަމްބަރު :
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        އަގު: އޭސީ =/150 ރުފިޔާ ނޮން އޭސީ =/100 ރުފިޔާ
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        މާލެ/މާމިގިލި : ހޯމަ، ބުރާސްފަތި ދުވަހުގެރޭ 23:00
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        މާމިގިލި / މާލެ : ހޮނިހިރު، ބުދަ ދުވަހުގެރޭ 22:00 </li>
+                </ul>
+                <h6>
+                    ސުޕީޑް ލޯންޗްގެ ޙިދުމަތް
+                </h6>
+                <hr>
+                <ul>
+                    <li class="dh" style="direction: rtl;">
+                        ފެރީގެ ނަން :
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        ފޯން ނަމްބަރު :
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        އަގު: =/350 ރުފިޔާ
+                    </li>
+
+                </ul>
+                <h6>
+                    ވައިގެ މަގުން </h6>
+                <hr>
+                <ul>
+                    <li class="dh" style="direction: rtl;">
+                        އެއަރލައިންގެ ނަން : ފުލައިމީ </li>
+                    <li class="dh" style="direction: rtl;">
+                        ޓިކެޓްގެ އަގު =/600 ރުފިޔާ
+                    </li>
+                    <li class="dh" style="direction: rtl;">
+                        ރިޒަވޭޝަން ނަމްބަރު : 3013000 </li>
+
+                </ul>
+            </div>
         </div>
 
 
@@ -78,339 +165,76 @@ ViewData["Title"] = "Home Page";
 
     <hr>
 
-</div>
 
 
 
 
 
 
-
-<div class="row" style="padding-right:  15px; padding-left: 15px;">
-
-    @foreach (var item in ViewBag.ImportantNews)
-
-    {
-
-    <div class="col m3 s12">
-
-        <div class="card">
-
-            <div class="card-image">
-
-                <img src="~/newsImage/@item.ImgUrl" class="responsive-img" style="width: 100%;height: 25%">
-
-
-
-            </div>
-
-            <div class="card-content">
-
-                <p class="right-align dh" style="direction: rtl;">@item.Title</p>
-
-            </div>
-
-            <div class="card-action">
-
-                <a  href="@Url.Action("Index", "News",new{id=@item.Id})" class="dh " style="direction: rtl;">އިތުރަށް
-
-                    ވިދާޅުވުމަށް</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    }
-
-    <!-- <div class="col m6 s12 center-align">
-
-<h5 class="dh center-align" style="font-size: 20px;">
-
-    ކައުންސިލަރުންގެ މަޢުލޫމާތު
-
-</h5>
-
-
-
-
-
-
-
-          <div class="col m3 s12">
-
-      <img src="~/council/@ViewBag.conciller.FirstPic" class="responsive-img z-depth-3 circle " style="width: 200%;height: 200%;">
-
-      <p class="dh center-align" style="direction: rtl;">
-
-       އަލްފާޟިލް  @ViewBag.conciller.FirstName
-
-      </p>
-
-      <p class="dh center-align" style="direction: rtl;">
-
-          ރައީސް ކައުންސިލްގެ
-
-      </p>
-
-      </div> 
-
-      
-
-          <div class="col m3 s12 ">
-
-      <img src="~/council/@ViewBag.conciller.SecondPic" class="responsive-img z-depth-3">
-
-      <p class="dh center-align" style="direction: rtl;">
-
-       އަލްފާޟިލް  @ViewBag.conciller.SecondName
-
-      </p>
-
-        <p class="dh center-align" style="direction: rtl;">
-
-          ރައީސް ނައިބް ކައުންސިލްގެ 
-
-      </p>
-
-      </div> 
-
-
-
-            <div class="col m3 s12">
-
-      <img src="~/council/@ViewBag.conciller.TheirdPic" class="responsive-img z-depth-3">
-
-      <p class="dh center-align" style="direction: rtl;">
-
-       އަލްފާޟިލް  @ViewBag.conciller.TheirdName
-
-      </p>
-
-      <p class="dh center-align" style="direction: rtl;">
-
-          ރައީސް ނައިބް ކައުންސިލްގެ 
-
-      </p>
-
-      </div> 
-
-
-
-      
-
-            <div class="col m3 s12">
-
-      <img src="~/council/@ViewBag.conciller.FourthPic" class="responsive-img z-depth-3">
-
-      <p class="dh center-align" style="direction: rtl;">
-
-       އަލްފާޟިލް  @ViewBag.conciller.FourthName
-
-      </p>
-
-         <p class="dh center-align" style="direction: rtl;">
-
-          ކައުންސިލަރ
-
-      </p>
-
-      </div> 
-
-
-
-
-
-              <div class="col m3 s12">
-
-      <img src="~/council/@ViewBag.conciller.FifthPic" class="responsive-img z-depth-3">
-
-      <p class="dh center-align" style="direction: rtl;">
-
-       އަލްފާޟިލް  @ViewBag.conciller.FifthName
-
-      </p>
-
-          <p class="dh center-align" style="direction: rtl;">
-
-          ކައުންސިލަރ
-
-      </p>
-
-      </div> 
-
-
-
-</div> -->
-
-</div>
-
-<div class="row" style="padding-right:  15px; padding-left: 15px;">
-
-    <div class="col m4 s12 right center-align">
-
-        <img src="~/images/580b585b2edbce24c47b2ab8.png" style="width: 79px;" class="responsive-img left-alilgn">
-
-
-
-        <h5 class="dh dhsub right-align" style="direction: rtl; margin-top: 2px;">
-
-            ޙިޖްރީ ތާޜީޙް އާއި ނަމާދު ވަގުތު
-
-        </h5>
-
-        <hr>
-
-        <a href="~/Calender/@ViewBag.calander.ImgUrl">
-
-            <img src="~/Calender/@ViewBag.calander.ImgUrl" class="right " style="width: 39%;">
-
-        </a>
-
-
-
-
-
-    </div>
-
-    <div class="col m6 s12 right pull-m2">
-
-        <h5 class="right-align  dhsub" style="direction: rtl;">
-
-            <i class="material-icons"> people</i>
-
-އެންގުންތައް        
-
-</h5>
-
-        <hr>
-
-<ul class="right-align">
-
-    @foreach (var item in ViewBag.anouncements)
-
-    {
-
-        <li class="dh" style="font-family: Faruma;direction: rtl;">
-
-            <a href="~/anounceDoc/@item.DocUrl"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
-
-
-
-                @item.Title 
-
-            </a>
-
-        </li>
-
-    }
-
-</ul>
-
-      
-
-    </div>
-
-</div>
-
-<div class="">
 
     <div class="row" style="">
 
-
-
         <div class="col m6 s12 right ">
+            <h5 class="right-align  dhsub news-parag" style="direction: rtl; font-weight: bold;">
 
-            <h6 class="dhsub right-align" style="direction: rtl; ">
+                <i class="material-icons"> link
+                </i>
 
+                މުހިންމު ލިންކުތައް
 
-
-                <i class="material-icons"> home</i>
-
-                މާމިގިލީގައި ފާހަގަ ކޮށްލެވޭ ގެސްޓް ހައުސްތައް
-
-            </h6>
-
+            </h5>
             <hr>
-
-            @foreach (var item in ViewBag.guestHouse)
-
-            {
-
-            <li class="right-align" style="direction: rtl;">
-
-                <a href="@Url.Action(" GuestHouseInfo","Link",new{id=@item.Id})">
-
-                    @item.Title
-
-                </a>
-
-
-
-            </li>
-
-            }
-
-
+            <ul class="right-align">
+                <li class="dh " style="direction: rtl">
+                    <a href="" class="dh " style="font-size: 19px;font-weight: bolder;">މިނިސްޓްރީ އޮފް އިސްލާމިކް
+                        އެފެއަރޒް</a>
+                </li>
+            </ul>
 
         </div>
 
+        <div class="col m6 s12 right ">
 
+            <h5 class="right-align  dhsub news-parag" style="direction: rtl; font-weight: bold;">
 
+                <i class="material-icons"> people</i>
 
+                އިޢުލާން
 
-        <div class="col m6 s12  ">
-
-            <h6 class="dhsub right-align" style="direction: rtl;">
-
-                <i class="material-icons"> free_breakfast</i>
-
-                މާމިގިލީ ގައި ހުރި ކެފޭތައް
-
-            </h6>
+            </h5>
 
             <hr>
 
+            <ul class="right-align">
+
+                @if (ViewBag.anouncements != null)
+                {
+                @foreach (var item in ViewBag.anouncements)
+
+                {
+
+                <li class="dh" style="font-family: Faruma;direction: rtl;">
+
+                    <a href="~/anounceDoc/@item.DocUrl" class="" style="font-size: 16px;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png"
+                            style="width: 30px;">
 
 
 
+                        @item.Title
+
+                    </a>
+                    <br>
+                    <span class="right-align blue-grey-text " style="direction: rtl"> <i class="material-icons">date_range</i>
+                        @Convert.ToDateTime(@item.Date)</span>
+
+                </li>
+
+                }
+                }
 
 
 
-
-
-            @foreach (var item in ViewBag.cafey )
-
-            {
-
-
-
-
-
-
-
-            <li class="right-align" style="direction: rtl;">
-
-                <a href="~/cafey/@item.ImgUrl" class="dh right-align" style="direction: rtl;font-size: 19px;">@item.Title</a>
-
-            </li>
-
-
-
-
-
-            }
-
-
-
-
-
-
-
-
-
-
+            </ul>
 
 
 
@@ -418,105 +242,52 @@ ViewData["Title"] = "Home Page";
 
     </div>
 
-    <div class="row" style=" ">
+    <div class="">
+
+        <div class="row" style="">
+            <div class="col s12 right">
+                <h5 class="right-align  dhsub news-parag" style="direction: rtl; font-weight: bold;">
+
+                    <i class="material-icons"> image
+
+                    </i>
+
+                    ފޮޓޯ ގެލަރީ
+                </h5>
+                <hr>
+                <div class=" ">
+                    @if (ViewBag.gallery != null)
+                    {
+                    @foreach (var item in ViewBag.gallery)
+                    {
+                    <div class="col  ">
+                        <img src="~/gallery/@item.ImgUrl" data-caption="@item.Text" style="width: 240px;height: 149px;margin-bottom: 12px;"
+                            class="materialboxed responsive-img">
+
+                    </div>
+
+                    }
+                    }
+                </div>
+
+
+            </div>
 
 
 
-        <div class="col m6 s12 right " style="">
-
-            <h6 class="dhsub right-align" style="direction: rtl;">
-
-                <i class="material-icons">new_releases</i> ނޫސް ބަޔާން
-
-            </h6>
 
 
 
-            <hr>
-
-            <ul class=" right-align">
-
-                @foreach (var item in ViewBag.newspress)
-
-                {
-
-                <li class="dh" style="font-family: Faruma;direction: rtl;">
-
-                    <a href="~/LinkPic/@item.ImgUrl"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
-
-
-
-                        @item.Title (
-
-                        <span>@item.Text</span>
-
-                        )
-
-                    </a>
-
-                </li>
-
-
-
-                }
-
-            </ul>
 
 
 
         </div>
 
-        <div class="col m6 s12 right " style="">
-
-            <h6 class="dhsub right-align" style="direction: rtl;">
-
-                <i class="material-icons">event_note</i> ނިންމުންތައް
-
-            </h6>
-
-
-
-            <hr>
-
-
-
-            <ul class=" right-align">
-
-                @foreach (var item in ViewBag.Approved)
-
-                {
-
-                <li class="dh" style="font-family: Faruma;direction: rtl;">
-
-                    <a href="~/LinkPic/@item.ImgUrl"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
-
-
-
-                        @item.Title (
-
-                        <span>@item.Text</span>
-
-                        )
-
-                    </a>
-
-                </li>
-
-
-
-                }
-
-            </ul>
-
-        </div>
-
-
+     
 
     </div>
 
 </div>
-
-
 
 <script>
 

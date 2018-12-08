@@ -22,9 +22,9 @@ namespace Coun.Controllers
             try
             {
                 ViewData["Title"] = "Home";
-                ViewBag.gallery = _db.GalleryModels.Where(x => x.Text == "photo").ToArray().Take(6);
+                ViewBag.gallery = _db.GalleryModels.Where(x => x.Text == "photo").ToArray().Take(8);
                 ViewBag.slider = _db.SliderModels.OrderByDescending(x=>x.Id).Take(6).ToArray();
-		ViewBag.anouncements = _db.anouncementsModels.ToArray ().Take (6);
+		        ViewBag.anouncements = _db.anouncementsModels.ToArray ().Take (6);
                 ViewBag.news = _db.NewsModels.OrderByDescending(x => x.Id).ToArray<NewsModel>().Take<NewsModel>(1);
                 ViewBag.ImportantNews = _db.NewsModels.OrderByDescending(x=>x.Id).Skip(1).ToArray().Take(4);
                 ViewBag.guestHouse = _db.GuestHousesModels.ToArray();
@@ -32,7 +32,7 @@ namespace Coun.Controllers
                 ViewBag.Form = _db.LinkModels.Where(x => x.Catogary == "forms").ToArray();
                 ViewBag.mission = _db.LinkModels.Where(x => x.Catogary == "vs").ToArray();
                 ViewBag.conciller = _db.CouncilModels.OrderByDescending(x => x.Id).First();
-                ViewBag.cafey = _db.CafeyModels.ToArray();
+                   ViewBag.cafey = _db.CafeyModels.ToArray();
                 ViewBag.newspress = _db.LinkModels.Where(x => x.Catogary == "news press").ToArray();
                 ViewBag.Approved = _db.LinkModels.Where(x => x.Catogary == "finished & aprove").ToArray();
                 ViewBag.services = _db.LinkModels.Where(x => x.Catogary == "services").ToArray();

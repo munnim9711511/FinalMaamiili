@@ -9,7 +9,7 @@ $(() => {
     $('.collapsible').collapsible();
     $('.parallax').parallax();
     $('.slider').slider({
-        height: 500
+        height: "100px"
     });
     $('.sidenav').sidenav({
         edge: "right"

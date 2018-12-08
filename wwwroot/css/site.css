@@ -20,7 +20,7 @@ body{
   }
 
   a {
-    color: #139e5a;
+    color: #292e2c;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
@@ -73,4 +73,29 @@ body {
     height: 48px;
     line-height: 48px;
     padding: 0 32px;
+}
+.container {
+    width: 90%;
+}
+
+
+.newsHeading {
+    line-height: 1.5;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.news-parag {
+    text-align: justify;
+    direction: rtl;
+    font-size: 1.5em;
+    /* line-height: 5px; */
+}
+
+.collection .collection-item {
+    background-color: #fff;
+    line-height: 2.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
 }
