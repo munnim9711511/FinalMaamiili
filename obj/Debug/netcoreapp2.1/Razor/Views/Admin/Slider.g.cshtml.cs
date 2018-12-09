@@ -63,7 +63,7 @@ using Coun.Models;
             WriteLiteral("<h5>\n    Slider \n</h5>\n<hr>\n\n");
             EndContext();
             BeginContext(83, 379, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5d411feac880441593904dd21ff1ae57", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dbe158d113ba457f934db1cba87dbcbd", async() => {
                 BeginContext(149, 306, true);
                 WriteLiteral(@"
     <div class=""row"">

@@ -1,13 +1,28 @@
 <div class="container">
+  
     <br>
 <div class="container center-align">
 @foreach (var item in ViewBag.news)
 {
+  
     <h5 class="dh right-align newsHeading" style="line-height: 1.5">@item.Title</h5>
     <img  src="~/newsImage/@item.ImgUrl" class="center-align responsive-img"  height="484px" width="750px"/>
     <p class="dh right-align news-parag" style="text-align: justify;direction: rtl ;">
         @item.Text
     </p>
+    <hr>
+          <a href="http://www.facebook.com/sharer.php?u=http://maamigilicouncil.gov.mv/News/Index/@item.Id" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" style="width: 33px;" />
+    </a>
+      <a href="https://twitter.com/share?url=http://maamigilicouncil.gov.mv/News/Index/@item.Id" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" style="width: 33px;" />
+    </a>
+       <a href="viber://forward?text=@item.Title%20http://maamigilicouncil.gov.mv/News/Index/@item.Id" target="_blank">
+        <img src="~/images/icon/viber_PNG25.png" alt="Twitter" style="width: 33px;" />
+    </a>
 }
 </div>
+
+
 </div>
+

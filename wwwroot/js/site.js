@@ -24,4 +24,5 @@ $(() => {
 
     $('.carousel').carousel();
 
+
 });
