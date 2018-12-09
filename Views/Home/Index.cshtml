@@ -64,7 +64,7 @@ ViewData["Title"] = "Home Page";
             <div class="col m12 s12"><img src="~/newsImage/@item.ImgUrl" class=" responsive-img" style="width: 600px;height: 325px;"></div>
 
             <div class="col s12 right-align" style="padding: 5px;"><a class="dh right-align" style="font-size: 29px;font-weight: bolder;"
-                    href="@Url.Action(" Index","News",new{id=@item.Id})">@item.Title</a>
+                    href="@Url.Action("Index","News",new{id=@item.Id})">@item.Title</a>
                 <br>
                 <span class=" right-align blue-grey-text " style="direction: rtl"> @item.Date <i class="material-icons">date_range</i></span>
 
@@ -92,7 +92,7 @@ ViewData["Title"] = "Home Page";
 
                 </div>
                 <div class="col m6 s6">
-                    <a href="@Url.Action(" Index","News",new{id=@item.Id})" class="right dh" style="direction: rtl; font-size: 17px;font-weight: bolder;">@item.Title</a>
+                    <a href="@Url.Action("Index","News",new{id=@item.Id})" class="right dh" style="direction: rtl; font-size: 17px;font-weight: bolder;">@item.Title</a>
 
                     <span class="blue-grey-text  right-align" style="direction: rtl"> @item.Date <i class="material-icons">date_range</i></span>
 
@@ -261,9 +261,10 @@ ViewData["Title"] = "Home Page";
                     @foreach (var item in ViewBag.gallery)
                     {
                     <div class="col  ">
-                        <img src="~/gallery/@item.ImgUrl" data-caption="@item.Text" style="width: 240px;height: 149px;margin-bottom: 12px;"
+                        <img src="~/gallery/@item.ImgUrl" data-caption=@item.Title style="width: 240px;height: 149px;margin-bottom: 12px;"
                             class="materialboxed responsive-img">
 
+                        
                     </div>
 
                     }

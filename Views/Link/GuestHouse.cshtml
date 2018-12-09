@@ -9,12 +9,23 @@
              <ul>
                    @foreach (var item in  ViewBag.GH)
             {
-                <li>
-                    <a href="@Url.Action("GuestHouseInfo","Link",new{id=@item.Id})">
+
+                      <div class="col m4 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="~/GuestHousePic/@item.ImgUrl1" class="responsive-img" style="widows: 120px;height:225px;">
+
+                        </div>
+                        <div class="card-content">
+                                         <a href="@Url.Action("GuestHouseInfo","Link",new{id=@item.Id})" class="news-parag ">
                         @item.Title
                     </a>
-                    
-                </li>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+
                   
             }
          </ul>

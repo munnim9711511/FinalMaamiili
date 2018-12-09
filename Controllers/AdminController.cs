@@ -247,7 +247,7 @@ namespace Coun.Controllers
                 var fileName = Path.Combine(he.WebRootPath + "/newsImage", Path.GetFileName(NewsPic.FileName));
                 NewsPic.CopyTo(new FileStream(fileName, FileMode.Create));
                 newsM.ImgUrl = Path.GetFileName(NewsPic.FileName);
-                newsM.Date = DateTime.Now.ToString();
+                newsM.Date = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
                 _db.NewsModels.Update(newsM);
                 _db.SaveChanges();
 

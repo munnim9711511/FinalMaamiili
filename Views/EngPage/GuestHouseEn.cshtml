@@ -1,4 +1,4 @@
-<div class="card">
+<div class=" ">
 <div class="container center-align">
     <br>
    <h5 class="left-align">
@@ -7,18 +7,32 @@
    <hr>
 <div class="row">
     <div class="col s12  left-align">
-        <ul>
+      
                   @foreach (var item in  ViewBag.ghouseEn)
         {
-            <li>
-                <a href="@Url.Action("GuestHouseEngInfo","Link",new{id=@item.Id})">
+
+            
+                      <div class="col m4 s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="~/GuestHousePic/@item.ImgUrl1" class="responsive-img" style="widows: 120px;height:225px;">
+
+                        </div>
+                        <div class="card-content">
+                             <a class="news-parag " href="@Url.Action("GuestHouseEngInfo","Link",new{id=@item.Id})">
                        @item.TitleEng
                 </a>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+
+                  
+          
              
-            </li>
-      
         }
-        </ul>
+      
   
        
     </div>
