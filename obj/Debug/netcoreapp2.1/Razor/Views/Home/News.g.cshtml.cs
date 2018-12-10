@@ -75,7 +75,7 @@ using Coun.Models;
             WriteLiteral("                <div class=\"col m4 s12\">\n                    <div class=\"card\">\n                        <div class=\"card-image\">\n                            ");
             EndContext();
             BeginContext(554, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "b558bdf54fe84b0e8896ca9a7c94b195", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "66679df535804f9cb9f41d794f782d6c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
