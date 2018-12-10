@@ -1,17 +1,21 @@
-<div class="card">
+<div class="">
 <div class="container">
     <br>
     <h5 class=" dh right-align">މިސަން އަދި ވިޝަން</h5>
     <hr>
 <div>
 
+<div class="container">
 @foreach (var item in ViewBag.mission)
 {
-    <h5 class="dh right-align" style="direction: rtl;">@item.Title</h5>
-    <p class="dh right-align overflow-wrap: break-word;">
+    <h5 class="dh right-align" style="direction: rtl; font-weight: bold;">@item.Title</h5>
+    <hr>
+    <p class="dh right-align news-parag" style="text-align: justify;direction: rtl ;">
         @item.Text
     </p>
 }
+</div>
+
 
 
 

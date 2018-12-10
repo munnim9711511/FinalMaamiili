@@ -14,7 +14,7 @@ namespace Coun.Controllers {
             this._db = _db;
         }
         public IActionResult Index (string type) {
-            ViewBag.Images = _db.GalleryModels.ToArray();
+            ViewBag.Images = _db.GalleryModels.OrderByDescending(x=>x.Id).ToArray();
             return View (ViewBag);
         }
 
