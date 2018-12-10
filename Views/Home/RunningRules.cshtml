@@ -1,15 +1,26 @@
 <div class="">
-    <div class="container">
-        <br>
-        <h5 class="dh right-align">ހިންގާ ޤަވައިދު</h5>
-        <hr>
-        <div class="row">
-            <div class="col s12 right">
-                <ul class=" right-align">
-                    <li></li>
-                </ul>
-
-            </div>
+<div class="container">
+    <br>
+    <h5 class="dh right-align">ޤަވައިދު</h5>
+    <hr>
+    <div class="row  ">
+        <div class="col s12 right">
+            <ul class=" right-align">
+                   @foreach (var item in  ViewBag.runningRules)
+            {
+                <li class="dh right-align" style="font-family: Faruma;direction: rtl;">
+                    <a href="~/LinkPic/@item.ImgUrl" style="font-size: 1.4em;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
+                    
+                    @item.Title
+                   
+                    </a>
+                </li>
+                
+            }
+            </ul>
+         
         </div>
     </div>
+
+</div>
 </div>

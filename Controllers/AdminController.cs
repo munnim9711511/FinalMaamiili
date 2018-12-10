@@ -218,7 +218,7 @@ namespace Coun.Controllers
                 var fileName = Path.Combine(he.WebRootPath + "/LinkPic", Path.GetFileName(NewsPic.FileName));
                 NewsPic.CopyTo(new FileStream(fileName, FileMode.Create));
                 linlM.ImgUrl = Path.GetFileName(NewsPic.FileName);
-
+                linlM.Date =  DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
                 _db.LinkModels.Add(linlM);
                 _db.SaveChanges();
 
@@ -335,6 +335,7 @@ namespace Coun.Controllers
                 var fileName = Path.Combine(he.WebRootPath + "/LinkPic", Path.GetFileName(NewsPic.FileName));
                 NewsPic.CopyTo(new FileStream(fileName, FileMode.Create));
                 linlM.ImgUrl = Path.GetFileName(NewsPic.FileName);
+                linlM.Date = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
 
                 _db.LinkModels.Update(linlM);
                 _db.SaveChanges();

@@ -9,5 +9,6 @@ namespace coouncil.Models
         public string ImgUrl { get; set; }
         public string Text { get; set; }
         public string Catogary { get; set; }
+        public string Date { get; set; }
     }
 }
