@@ -25,12 +25,12 @@ namespace Coun.Controllers
                 ViewBag.Rules = _db.LinkModels.Where(x => x.Catogary == "runningrules").OrderByDescending(x => x.Id).Take(6).ToArray();
                 ViewBag.gallery = _db.GalleryModels.OrderByDescending(x => x.Id).ToArray().Take(8);
                 ViewBag.slider = _db.SliderModels.Where(x => x.Text == "photo").OrderByDescending(x => x.Id).Take(6).ToArray();
-                ViewBag.anouncements = _db.anouncementsModels.ToArray().Take(6);
+                ViewBag.anouncements = _db.anouncementsModels.ToArray().Take(3);
                 ViewBag.news = _db.NewsModels.OrderByDescending(x => x.Id).ToArray<NewsModel>().Take<NewsModel>(1);
                 ViewBag.ImportantNews = _db.NewsModels.OrderByDescending(x => x.Id).Skip(1).ToArray().Take(3);
                 ViewBag.guestHouse = _db.GuestHousesModels.ToArray();
                 ViewBag.advertise = _db.LinkModels.Where(x => x.Catogary == "advertisement").ToArray().Take(4);
-                ViewBag.Form = _db.LinkModels.Where(x => x.Catogary == "forms").ToArray();
+                ViewBag.Form = _db.LinkModels.Where(x => x.Catogary == "forms").ToArray().Take(6);
                 ViewBag.mission = _db.LinkModels.Where(x => x.Catogary == "vs").ToArray();
                 ViewBag.conciller = _db.CouncilModels.OrderByDescending(x => x.Id).First();
                 ViewBag.cafey = _db.CafeyModels.ToArray();

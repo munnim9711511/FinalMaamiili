@@ -106,7 +106,7 @@ ViewData["Title"] = "Home Page";
 
         </div>
         <div class="col m3 s12" style="border: 1px solid green;border-radius: 15px;">
-            <div class="right-align dh">
+            <!-- <div class="right-align dh">
                 <h6>
                     ފެރީގެ ޙިދުމަތް
                 </h6>
@@ -155,8 +155,49 @@ ViewData["Title"] = "Home Page";
                     <li class="dh" style="direction: rtl;">
                         ރިޒަވޭޝަން ނަމްބަރު : 3013000 </li>
 
-                </ul>
-            </div>
+                </ul> 
+            </div> -->
+               <h5 class="right-align  dhsub news-parag" style="direction: rtl; font-weight: bold;">
+
+                <i class="material-icons"> people</i>
+
+                އިޢުލާން
+
+            </h5>
+
+            <hr>
+
+            <ul class="right-align">
+
+                @if (ViewBag.anouncements != null)
+                {
+                @foreach (var item in ViewBag.anouncements)
+
+                {
+
+                <li class="dh" style="font-family: Faruma;direction: rtl;">
+
+                    <a href="~/anounceDoc/@item.DocUrl" class="" style="font-size: 1.2em;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png"
+                            style="width: 30px;">
+
+
+
+                        @item.Title
+
+                    </a>
+                    <br>
+                    <span class="right-align blue-grey-text " style="direction: rtl"> <i class="material-icons">date_range</i>
+                        @item.Date</span>
+
+                </li>
+
+                }
+                }
+
+
+
+            </ul>
+
         </div>
 
 
@@ -194,7 +235,7 @@ ViewData["Title"] = "Home Page";
 
                 <li class="dh" style="font-family: Faruma;direction: rtl;">
 
-                    <a href="~/LinkPic/@item.ImgUrl" class="" style="font-size: 16px;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png"
+                    <a href="~/LinkPic/@item.ImgUrl" class="" style="font-size: 1.2em;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png"
                             style="width: 30px;">
 
 
@@ -223,7 +264,7 @@ ViewData["Title"] = "Home Page";
 
                 <i class="material-icons"> people</i>
 
-                އިޢުލާން
+                ޑައުންލޯޑް
 
             </h5>
 
@@ -231,7 +272,21 @@ ViewData["Title"] = "Home Page";
 
             <ul class="right-align">
 
-                @if (ViewBag.anouncements != null)
+                   <ul class=" right-align">
+                   @foreach (var item in  ViewBag.Form)
+            {
+                <li class="dh right-align" style="font-family: Faruma;direction: rtl;">
+                    <a href="~/LinkPic/@item.ImgUrl" style="font-size: 1.2em;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
+                    
+                    @item.Title
+                   
+                    </a>
+                </li>
+                
+            }
+            </ul>
+
+                <!-- @if (ViewBag.anouncements != null)
                 {
                 @foreach (var item in ViewBag.anouncements)
 
@@ -254,7 +309,7 @@ ViewData["Title"] = "Home Page";
                 </li>
 
                 }
-                }
+                } -->
 
 
 

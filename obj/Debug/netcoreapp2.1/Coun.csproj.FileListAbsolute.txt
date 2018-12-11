@@ -1047,3 +1047,4 @@ D:/desk/count1/obj/Debug/netcoreapp2.1/Razor/Views/Admin/UpdatLink.g.cshtml.cs
 /home/muunim/MaamigiliCouncil/obj/Debug/netcoreapp2.1/Coun.dll
 /home/muunim/MaamigiliCouncil/obj/Debug/netcoreapp2.1/Coun.pdb
 /home/muunim/MaamigiliCouncil/obj/Debug/netcoreapp2.1/Coun.csproj.CopyComplete
+/home/muunim/MaamigiliCouncil/obj/Debug/netcoreapp2.1/Razor/Views/Link/FerryService.g.cshtml.cs

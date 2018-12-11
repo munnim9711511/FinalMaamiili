@@ -61,6 +61,10 @@ namespace Coun.Controllers {
             ViewBag.bussines = _db.LinkModels.Where (x => x.Catogary == "bussiness").ToArray ();
             return View (ViewBag);
         }
+        [HttpGet]
+        public IActionResult FerryService(){
+            return View();
+        }
 
     }
 }

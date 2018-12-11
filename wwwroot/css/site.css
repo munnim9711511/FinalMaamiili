@@ -108,3 +108,8 @@ body {
     box-shadow: 0;
     display: inline;
     }
+
+    .top-nav-head {
+       background-image: url("../images/s-l300.jpg");
+      image-rendering: crisp-edges;
+    }
