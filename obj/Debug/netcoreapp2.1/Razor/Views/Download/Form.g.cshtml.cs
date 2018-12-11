@@ -65,9 +65,9 @@ using Coun.Models;
             WriteLiteral("                <li class=\"dh right-align\" style=\"font-family: Faruma;direction: rtl;\">\n                    ");
             EndContext();
             BeginContext(374, 239, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "78cf730e403d43f89c2d02f3cbc4ca10", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f10bb42f18f74aa7a884a5529afac904", async() => {
                 BeginContext(433, 82, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e693e03d017b4c49b68872f5f2dfcbb0", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "fa6b5d0cd3d3471b92e2b5f1b4049855", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
