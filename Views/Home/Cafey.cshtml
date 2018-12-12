@@ -1,21 +1,41 @@
-<div class="card">
+<div class="">
     <div class="container">
         <br>
 <div class="col s12">
     <h5 style="font-family: Faruma" class="right-align" >ކެފޭ ތަކުގެ މަޢުލޫމާތު</h5><hr>
 </div>
 
-<div class="container">
-@foreach (var item in ViewBag.cafey )
-{
-    <h5 style="font-family: Faruma" class="right-align">
-        @item.Title
-    </h5>
-   <img src="~/cafey/@item.ImgUrl " alt="" class="responsive-img center-align" height="484px" width="750px">  
-   <p class="dh right-align " style="text-align: justify; overflow-wrap: break-word; direction: rtl;">
-       @item.Text
-   </p>
-}
+<div class="row">
+
+ @foreach (var item in ViewBag.cafey) {
+
+      <div class="col s12 m6 right">
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="~/LinkPic/@item.ImgUrl "
+              alt=""
+              class="responsive-img center-align"
+              height="484px"
+              width="750px"
+            />
+           
+          </div>
+          <div class="card-content">
+              <h6 style="font-family: Faruma ;direction: rtl;" class="right-align">
+                  @item.Title
+              </h6>
+              <hr>
+            <p class="dh right-align " style="text-align: justify; overflow-wrap: break-word; direction: rtl;">
+                @item.Text
+            </p>
+          </div>
+        </div>
+      </div>
+     
+
+      }
+
 </div>
 </div>
 </div>
