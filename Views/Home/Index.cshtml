@@ -10,42 +10,6 @@ ViewData["Title"] = "Home Page";
 
 
 
-    <!-- <div class="slider">
-
-        <ul class="slides">
-
-            @if (ViewBag.slider !=null)
-
-            {
-
-            @foreach (var item in ViewBag.slider)
-
-            {
-
-            <li>
-
-                <img src="~/slideImage/@item.ImgUrl" class="responsive-img">
-
-
-
-
-
-            </li>
-
-            }
-
-            }
-
-
-
-        </ul>
-
-    </div> -->
-
-
-
-
-
 
 
     <div class="row">
@@ -106,57 +70,7 @@ ViewData["Title"] = "Home Page";
 
         </div>
         <div class="col m3 s12" style="border: 1px solid green;border-radius: 15px;">
-            <!-- <div class="right-align dh">
-                <h6>
-                    ފެރީގެ ޙިދުމަތް
-                </h6>
-                <hr>
-                <ul>
-                    <li class="dh" style="direction: rtl;">
-                        ފެރީގެ ނަން :
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        ފޯން ނަމްބަރު :
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        އަގު: އޭސީ =/150 ރުފިޔާ ނޮން އޭސީ =/100 ރުފިޔާ
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        މާލެ/މާމިގިލި : ހޯމަ، ބުރާސްފަތި ދުވަހުގެރޭ 23:00
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        މާމިގިލި / މާލެ : ހޮނިހިރު، ބުދަ ދުވަހުގެރޭ 22:00 </li>
-                </ul>
-                <h6>
-                    ސުޕީޑް ލޯންޗްގެ ޙިދުމަތް
-                </h6>
-                <hr>
-                <ul>
-                    <li class="dh" style="direction: rtl;">
-                        ފެރީގެ ނަން :
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        ފޯން ނަމްބަރު :
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        އަގު: =/350 ރުފިޔާ
-                    </li>
-
-                </ul>
-                <h6>
-                    ވައިގެ މަގުން </h6>
-                <hr>
-                <ul>
-                    <li class="dh" style="direction: rtl;">
-                        އެއަރލައިންގެ ނަން : ފުލައިމީ </li>
-                    <li class="dh" style="direction: rtl;">
-                        ޓިކެޓްގެ އަގު =/600 ރުފިޔާ
-                    </li>
-                    <li class="dh" style="direction: rtl;">
-                        ރިޒަވޭޝަން ނަމްބަރު : 3013000 </li>
-
-                </ul> 
-            </div> -->
+         
                <h5 class="right-align  dhsub news-parag" style="direction: rtl; font-weight: bold;">
 
                 <i class="material-icons"> people</i>
@@ -273,9 +187,11 @@ ViewData["Title"] = "Home Page";
             <ul class="right-align">
 
                    <ul class=" right-align">
-                   @foreach (var item in  ViewBag.Form)
-            {
-                <li class="dh right-align" style="font-family: Faruma;direction: rtl;">
+                       @if (ViewBag.Form != null)
+                       {
+                                   @foreach (var item in  ViewBag.Form)
+                             {
+                          <li class="dh right-align" style="font-family: Faruma;direction: rtl;">
                     <a href="~/LinkPic/@item.ImgUrl" style="font-size: 1.2em;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;">
                     
                     @item.Title
@@ -283,34 +199,10 @@ ViewData["Title"] = "Home Page";
                     </a>
                 </li>
                 
-            }
+            } 
+                       }
+          
             </ul>
-
-                <!-- @if (ViewBag.anouncements != null)
-                {
-                @foreach (var item in ViewBag.anouncements)
-
-                {
-
-                <li class="dh" style="font-family: Faruma;direction: rtl;">
-
-                    <a href="~/anounceDoc/@item.DocUrl" class="" style="font-size: 16px;"><img src="~/images/icon/red-circle-with-pdf-icon-png-20.png"
-                            style="width: 30px;">
-
-
-
-                        @item.Title
-
-                    </a>
-                    <br>
-                    <span class="right-align blue-grey-text " style="direction: rtl"> <i class="material-icons">date_range</i>
-                        @item.Date</span>
-
-                </li>
-
-                }
-                } -->
-
 
 
             </ul>
