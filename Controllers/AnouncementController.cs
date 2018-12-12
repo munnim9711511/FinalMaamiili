@@ -14,7 +14,7 @@ namespace Coun.Controllers {
             this._db = _db;
         }
         public IActionResult CouncilAnounce () {
-            ViewBag.council = _db.anouncementsModels.Where(x=>x.Catogary == "council").OrderBy (x => x.Id).ToArray ();
+            ViewBag.council = _db.anouncementsModels.Where(x=>x.Catogary == "council").OrderByDescending(x => x.Id).ToArray ();
             return View (ViewBag.council);
         }
 
