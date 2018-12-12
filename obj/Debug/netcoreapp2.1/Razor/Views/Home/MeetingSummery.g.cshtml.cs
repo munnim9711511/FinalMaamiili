@@ -64,7 +64,7 @@ using Coun.Models;
             WriteLiteral("                       <li>");
             EndContext();
             BeginContext(319, 110, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ca51c7df703e4f0c9778b2eec1152478", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bde16f6dad2a4bc8bcbb13dc427a410f", async() => {
                 BeginContext(381, 28, true);
                 WriteLiteral(" <h6 class=\"dh right-align\">");
                 EndContext();
