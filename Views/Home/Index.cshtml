@@ -229,14 +229,11 @@ ViewData["Title"] = "Home Page";
                 <div class=" ">
                     @if (ViewBag.gallery != null)
                     {
-                    @foreach (var item in ViewBag.gallery)
+                    @foreach (dynamic item in ViewBag.gallery)
                     {
-                    <div class="col  ">
-                        <img src="~/gallery/@item.ImgUrl" data-caption=@item.Title style="width: 240px;height: 149px;margin-bottom: 12px;"
-                            class="materialboxed responsive-img">
+                     @item
+                     
 
-                        
-                    </div>
 
                     }
                     }

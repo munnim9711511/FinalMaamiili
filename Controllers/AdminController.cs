@@ -50,20 +50,45 @@ namespace Coun.Controllers
         }
 
         [HttpPost]
-        public IActionResult Gallery(GalleryModel galleryM, IFormFile gpic)
+        public IActionResult Gallery(GalleryModel galleryM, List<IFormFile> gpic)
         {
+
             if (gpic != null)
             {
-                var fileName = Path.Combine(he.WebRootPath + "/gallery", Path.GetFileName(gpic.FileName));
-                gpic.CopyTo(new FileStream(fileName, FileMode.Create));
-                galleryM.ImgUrl = Path.GetFileName(gpic.FileName);
+                long size = gpic.Sum(f => f.Length);
 
-                _db.GalleryModels.Add(galleryM);
-                _db.SaveChanges();
+                foreach (var formFile in gpic)
+                {
+                    if (formFile.Length > 0)
+                    {
+                        var fileName = Path.Combine(he.WebRootPath + "/gallery", Path.GetFileName(formFile.FileName));
+                        formFile.CopyTo(new FileStream(fileName, FileMode.Create));
+                        galleryM.ImgUrl = formFile.FileName;
+                        galleryM.Date = DateTime.UtcNow.Date;
+                        _db.GalleryModels.Add(galleryM);
+                         _db.SaveChanges();
+
+                    }
+                       
+                    
+                }
 
             }
 
             return View("Gallery");
+
+            // if (gpic != null)
+            // {
+            //     var fileName = Path.Combine(he.WebRootPath + "/gallery", Path.GetFileName(gpic.FileName));
+            //     gpic.CopyTo(new FileStream(fileName, FileMode.Create));
+            //     galleryM.ImgUrl = Path.GetFileName(gpic.FileName);
+
+            //     _db.GalleryModels.Add(galleryM);
+            //     _db.SaveChanges();
+
+            // }
+
+            // return View("Gallery");
         }
 
         [HttpPost]
@@ -218,7 +243,7 @@ namespace Coun.Controllers
                 var fileName = Path.Combine(he.WebRootPath + "/LinkPic", Path.GetFileName(NewsPic.FileName));
                 NewsPic.CopyTo(new FileStream(fileName, FileMode.Create));
                 linlM.ImgUrl = Path.GetFileName(NewsPic.FileName);
-                linlM.Date =  DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
+                linlM.Date = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
                 _db.LinkModels.Add(linlM);
                 _db.SaveChanges();
 

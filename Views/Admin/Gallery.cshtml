@@ -4,7 +4,7 @@
 
 <h5>Gallery</h5>
 <hr>
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="Gallery" method="POST" enctype="multipart/form-data">
     <div class="row">
         <div class="col m4 input-field">
             <input type="text" name="Title" required>
@@ -15,14 +15,9 @@
     </div>
 <div class="row">
 <div class="col m4 input-field">
-      <select name="Text" required>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="photo">photo</option>
-      <option value="video">video</option>
-    
-    </select>
+   <input type="text" name="Text">
 <label>
-    catogary
+    discription
 </label>
 </div>
 </div>
@@ -32,7 +27,7 @@
                 Item
             </label>
             <br>
-            <input type="file" name="gpic" required>
+            <input type="file" multiple name="gpic" required>
          
         </div>
     </div>

@@ -14,8 +14,282 @@ namespace Coun.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("coouncil.Models.AnouncementsModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Catogary");
+
+                    b.Property<string>("Date");
+
+                    b.Property<string>("DocUrl");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("anouncementsModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.BussinesModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BussinesModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.CafeyModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CafeyModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.CalenderModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<string>("ImgUrl");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CalenderModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.CouncilModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("FifthName");
+
+                    b.Property<string>("FifthPic");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("FirstPic");
+
+                    b.Property<string>("FourthName");
+
+                    b.Property<string>("FourthPic");
+
+                    b.Property<string>("SecondName");
+
+                    b.Property<string>("SecondPic");
+
+                    b.Property<string>("TheirdName");
+
+                    b.Property<string>("TheirdPic");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CouncilModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.FormsModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Catogary");
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FormsModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.GalleryModel", b =>
+                {
+                    b.Property<string>("Title")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.HasKey("Title");
+
+                    b.ToTable("GalleryModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.GuestHousesModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ConatactNumber");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("ImgUrl1");
+
+                    b.Property<string>("ImgUrl2");
+
+                    b.Property<string>("ImgUrl3");
+
+                    b.Property<string>("ImgUrl4");
+
+                    b.Property<string>("ImgUrl5");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("TextEng");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("TitleEng");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GuestHousesModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.HistoryLocationModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HistoryLocationModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.ImportantLocationModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ImgUrl1");
+
+                    b.Property<string>("ImgUrl2");
+
+                    b.Property<string>("ImgUrl3");
+
+                    b.Property<string>("ImgUrl4");
+
+                    b.Property<string>("ImgUrl5");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("TextEng");
+
+                    b.Property<string>("Title");
+
+                    b.Property<string>("TitleEng");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ImportantLocationModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.JobModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("DocUrl");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("JobModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.LinkModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Catogary");
+
+                    b.Property<string>("Date");
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LinkModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.NewsModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Date");
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsModels");
+                });
+
+            modelBuilder.Entity("coouncil.Models.SliderModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SliderModels");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -172,280 +446,6 @@ namespace Coun.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("coouncil.Models.AnouncementsModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Catogary");
-
-                    b.Property<string>("Date");
-
-                    b.Property<string>("DocUrl");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("anouncementsModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.BussinesModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BussinesModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.CafeyModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CafeyModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.CalenderModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<string>("ImgUrl");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CalenderModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.CouncilModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("FifthName");
-
-                    b.Property<string>("FifthPic");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("FirstPic");
-
-                    b.Property<string>("FourthName");
-
-                    b.Property<string>("FourthPic");
-
-                    b.Property<string>("SecondName");
-
-                    b.Property<string>("SecondPic");
-
-                    b.Property<string>("TheirdName");
-
-                    b.Property<string>("TheirdPic");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CouncilModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.FormsModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Catogary");
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FormsModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.GalleryModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("GalleryModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.GuestHousesModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ConatactNumber");
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("ImgUrl1");
-
-                    b.Property<string>("ImgUrl2");
-
-                    b.Property<string>("ImgUrl3");
-
-                    b.Property<string>("ImgUrl4");
-
-                    b.Property<string>("ImgUrl5");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("TextEng");
-
-                    b.Property<string>("Title");
-
-                    b.Property<string>("TitleEng");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("GuestHousesModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.HistoryLocationModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("HistoryLocationModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.ImportantLocationModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ImgUrl1");
-
-                    b.Property<string>("ImgUrl2");
-
-                    b.Property<string>("ImgUrl3");
-
-                    b.Property<string>("ImgUrl4");
-
-                    b.Property<string>("ImgUrl5");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("TextEng");
-
-                    b.Property<string>("Title");
-
-                    b.Property<string>("TitleEng");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ImportantLocationModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.JobModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("DocUrl");
-
-                    b.Property<DateTime>("EndDate");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("JobModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.LinkModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Catogary");
-
-                    b.Property<string>("Date");
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("LinkModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.NewsModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Date");
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.Property<string>("Title");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("NewsModels");
-                });
-
-            modelBuilder.Entity("coouncil.Models.SliderModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("ImgUrl");
-
-                    b.Property<string>("Text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SliderModels");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
