@@ -8,16 +8,38 @@
     <div class="row">
       <h5 class="dh right-align">ގެލަރީ</h5>
       <hr>
+  @if (ViewBag.gallery != null)
+                    {
+                       
+                            
+                      
+                    @foreach (dynamic item in ViewBag.gallery)
+                    {
+                        var xc = item .ImgUrl.Split(',');
 
-      @foreach (var item in ViewBag.Images)
-      {
+                            @for (int i = 0; i < 1; i++)
+                            {
+                                <div class="col m3 s12">
+                                <div class="card">
+                                    <div class="card-image">
+                                    <img src="~/gallery/@xc[i]">
+                                   
+                                    </div>
+                                 
+                                    <div class="card-action center-align">
+                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="">@item.Title</a>
+                                    </div>
+                                </div>
+                                </div>
+                               
+                            }
+                            
 
-      <div class="col m3 s12">
-        <img src="~/gallery/@item.ImgUrl" data-caption=@item.Title style="width: 280px;height: 250px; margin-bottom: 10px;" class="materialboxed responsive-img">
-
-      </div>
-
-      }
+                        
+                    
+                     
+                    }
+                    }
 
     </div>
     <br>

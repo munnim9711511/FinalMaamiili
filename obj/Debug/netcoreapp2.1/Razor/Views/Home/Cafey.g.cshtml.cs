@@ -76,7 +76,7 @@ using Coun.Models;
             WriteLiteral("\r\n              </h6>\r\n        <div class=\"\">\r\n          <div class=\"\">\r\n            ");
             EndContext();
             BeginContext(471, 182, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b3ef140de8a142228a8df2cc37f97199", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f43866f0c75841fe85a3f4697743a1ad", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

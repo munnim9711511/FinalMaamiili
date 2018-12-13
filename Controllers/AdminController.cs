@@ -52,26 +52,34 @@ namespace Coun.Controllers
         [HttpPost]
         public IActionResult Gallery(GalleryModel galleryM, List<IFormFile> gpic)
         {
-
+          
             if (gpic != null)
             {
                 long size = gpic.Sum(f => f.Length);
 
                 foreach (var formFile in gpic)
                 {
+
+
                     if (formFile.Length > 0)
                     {
+
                         var fileName = Path.Combine(he.WebRootPath + "/gallery", Path.GetFileName(formFile.FileName));
                         formFile.CopyTo(new FileStream(fileName, FileMode.Create));
-                        galleryM.ImgUrl = formFile.FileName;
-                        galleryM.Date = DateTime.UtcNow.Date;
-                        _db.GalleryModels.Add(galleryM);
-                         _db.SaveChanges();
+                      
+
+
 
                     }
-                       
-                    
+                      galleryM.ImgUrl += formFile.FileName +",";
+                        // galleryM.ImgUrl = ;
+                        galleryM.Date = DateTime.UtcNow.Date;
+
+
+
                 }
+                _db.GalleryModels.Add(galleryM);
+                _db.SaveChanges();
 
             }
 

@@ -229,12 +229,34 @@ ViewData["Title"] = "Home Page";
                 <div class=" ">
                     @if (ViewBag.gallery != null)
                     {
+                       
+                            
+                      
                     @foreach (dynamic item in ViewBag.gallery)
                     {
-                     @item
+                        var xc = item .ImgUrl.Split(',');
+
+                            @for (int i = 0; i < 1; i++)
+                            {
+                                <div class="col m3 s12">
+                                <div class="card">
+                                    <div class="card-image">
+                                    <img src="~/gallery/@xc[i]">
+                                   
+                                    </div>
+                                 
+                                    <div class="card-action center-align">
+                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="">@item.Title</a>
+                                    </div>
+                                </div>
+                                </div>
+                               
+                            }
+                            
+
+                        
+                    
                      
-
-
                     }
                     }
                 </div>

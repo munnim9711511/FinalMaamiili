@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col m12 s12">
+           <br><br>
+                  <div class="slider">
+    <ul class="slides">
+
+        @foreach (var item in ViewBag.Gallery)
+        { 
+            
+        
+             var x = item .ImgUrl.Split(',');
+             @foreach (var s in x)
+             {
+                 <li>
+                     <img src="~/gallery/@s" alt="">
+                 </li>
+             }
+
+       
+      
+           
+        }
+   
+       </ul>   
+    
+  </div>
+        </div>
+    </div>
+
+</div>

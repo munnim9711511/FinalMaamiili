@@ -23,7 +23,7 @@ namespace Coun.Controllers
             {
                 ViewData["Title"] = "Home";
                 ViewBag.Rules = _db.LinkModels.Where(x => x.Catogary == "runningrules").OrderByDescending(x => x.Id).Take(6).ToArray();
-                ViewBag.gallery = _db.GalleryModels.Distinct().Select(x=>new{x.Title,x.ImgUrl}).Distinct();
+                ViewBag.gallery = _db.GalleryModels.ToArray().Take(8);
         
                 ViewBag.slider = _db.SliderModels.Where(x => x.Text == "photo").OrderByDescending(x => x.Id).Take(6).ToArray();
                 ViewBag.anouncements = _db.anouncementsModels.OrderByDescending(x => x.Id).ToArray().Take(4);
@@ -69,6 +69,12 @@ namespace Coun.Controllers
         }
 
         [HttpGet]
+        public IActionResult GallerySlider(string id){
+            ViewBag.Gallery = _db.GalleryModels.Where(x=>x.Title == id);
+            return View(ViewBag);
+        }
+
+        [HttpGet]
         public IActionResult Project(string id)
         {
             ViewData["Title"] = "Project";
@@ -80,7 +86,7 @@ namespace Coun.Controllers
         public IActionResult News()
         {
             ViewData["Title"] = "News";
-            ViewBag.news = _db.NewsModels.ToArray().OrderByDescending(x => x.Id);
+            ViewBag.news = _db.NewsModels.ToArray().OrderByDescending(x => x.Id).First();
 
             return View(ViewBag);
         }
