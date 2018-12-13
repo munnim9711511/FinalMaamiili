@@ -4331,7 +4331,7 @@ nav i.material-icons {
 }
 
 nav .nav-wrapper {
-  position: relative;
+  position: absolute;
   height: 100%;
 }
 
