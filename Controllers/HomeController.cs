@@ -86,7 +86,7 @@ namespace Coun.Controllers
         public IActionResult News()
         {
             ViewData["Title"] = "News";
-            ViewBag.news = _db.NewsModels.ToArray().OrderByDescending(x => x.Id).First();
+            ViewBag.news = _db.NewsModels.ToArray().OrderByDescending(x => x.Id).ToArray();
 
             return View(ViewBag);
         }
