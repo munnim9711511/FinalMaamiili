@@ -1,33 +1,44 @@
-
-
-<div class="container">
+<div class="container center-align">
     <div class="row">
-        <div class="col m12 s12">
-           <br><br>
-                  <div class="slider">
-    <ul class="slides">
+
+        <br><br>
+
+
 
         @foreach (var item in ViewBag.Gallery)
-        { 
-            
-        
-             var x = item .ImgUrl.Split(',');
-             @foreach (var s in x)
-             {
-                 <li>
-                     <img src="~/gallery/@s" alt="">
-                 </li>
-             }
+        {
+        <h4 class="dh newsHeading " style="direction: rtl;">@item.Title</h4>
+        <hr>
+        var x = item .ImgUrl.Split(',');
 
-       
-      
-           
-        }
-   
-       </ul>   
-    
-  </div>
+
+        @foreach (var s in x)
+        {
+        <div class="col m3 s12" style="padding-bottom: 10px;">
+
+
+            @if (s != null)
+            {
+
+
+            <img src="~/gallery/@s" class="materialboxed responsive-img " style="width: 337px;height: 206px;" alt="">
+
+
+
+            }
+
         </div>
+
+
+        }
+
+
+
+
+        }
+
+
+
     </div>
 
 </div>

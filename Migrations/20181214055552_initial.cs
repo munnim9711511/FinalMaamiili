@@ -154,24 +154,12 @@ namespace Coun.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(nullable: true),
                     ImgUrl = table.Column<string>(nullable: true),
-                    Text = table.Column<string>(nullable: true)
+                    Text = table.Column<string>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_GalleryModels", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "GallerySliderModels",
-                columns: table => new
-                {
-                    Title = table.Column<string>(nullable: false),
-                    ImgUrl = table.Column<string>(nullable: true),
-                    Text = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GallerySliderModels", x => x.Title);
                 });
 
             migrationBuilder.CreateTable(
@@ -476,9 +464,6 @@ namespace Coun.Migrations
 
             migrationBuilder.DropTable(
                 name: "GalleryModels");
-
-            migrationBuilder.DropTable(
-                name: "GallerySliderModels");
 
             migrationBuilder.DropTable(
                 name: "GuestHousesModels");

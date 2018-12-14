@@ -1,10 +1,15 @@
+
+
 <div class="container">
   
     <br>
 <div class="container center-align">
 @foreach (var item in ViewBag.news)
 {
-  
+  <meta property="og:title" content=@item.Title>
+<meta property="og:description" content=@item.Title>
+<meta property="og:image" content=~/newsImage/@item.ImgUrl>
+<meta property="og:url" content=http://maamigilicouncil.gov.mv/News/Index/@item.Id>
     <h5 class="dh right-align newsHeading" style="line-height: 1.5">@item.Title</h5>
     <img  src="~/newsImage/@item.ImgUrl" class="center-align responsive-img"  height="484px" width="750px"/>
     <p class="dh right-align news-parag" style="text-align: justify;direction: rtl ;">
