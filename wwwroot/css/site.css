@@ -113,3 +113,23 @@ body {
        background-image: url("../images/s-l300.jpg");
       image-rendering: crisp-edges;
     }
+
+    .card .card-action:last-child {
+        min-height: 5.2em;
+        border-radius: 0 0 2px 2px;
+    }
+    .card .card-image {
+        position: relative;
+        object-fit: cover;
+    }
+    .card .card-image img {
+        display: block;
+        border-radius: 2px 2px 0 0;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 13em;
+        width: 100%;
+    }
