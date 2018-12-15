@@ -63,7 +63,7 @@ using Coun.Models;
             WriteLiteral("                 <div class=\"carousel-item\">\n                 <video class=\"responsive-video\" controls style=\"width: 30%;\" width=\"700px\" height=\"300px\">\n                      ");
             EndContext();
             BeginContext(467, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8a8b58ae651848e799768a6913216d9d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8310773d87dd43e78b12136cfdb87030", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -50,6 +50,7 @@ namespace Coun.Controllers
         }
 
         [HttpPost]
+        [DisableRequestSizeLimit]
         public IActionResult Gallery(GalleryModel galleryM, List<IFormFile> gpic)
         {
           

@@ -65,12 +65,12 @@ using Coun.Models;
             WriteLiteral("        <li class=\"dh\" style=\"direction: rtl;\">");
             EndContext();
             BeginContext(296, 209, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "586a697ee9dd47bd9b913055d9df9869", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57ecf36172bd42018929de59a8376df4", async() => {
                 BeginContext(349, 21, true);
                 WriteLiteral("\r\n        \r\n         ");
                 EndContext();
                 BeginContext(370, 100, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e586b2c07af847a8a4613f68fa48d6e7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8b347f05b4ff43e48c34043fa90ac6b0", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
