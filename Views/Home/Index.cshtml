@@ -232,27 +232,37 @@ ViewData["Title"] = "Home Page";
                     {
                        
                             
-                      <table>
+                     
 
                             @foreach (dynamic item in ViewBag.gallery)
                     {
                         var xc = item .ImgUrl.Split(',');
-                             <!-- <div class="col m3 s12">
-                                   <div class="card">
-                                    <div class="card-image"> -->
-                                        <tr>
+                            
+                                  <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">     
                             @for (int i = 0; i < 1; i++)
                             {
                                
-                              <td>
+                            
                                     <img src="~/gallery/@xc[i]" class=" responsive-img " style="width: 337px;height: 206px;">
 
-                              </td>
+                              
                                    
                                    
                                
                             }
-                            </tr>
+                            </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="dh">@item.Title</a>
+       
+        </div>
+      </div>
+    </div>
                              <!-- </div>
                                  
                                     <div class="card-action center-align">

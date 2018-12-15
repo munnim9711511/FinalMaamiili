@@ -63,7 +63,7 @@ using Coun.Models;
             WriteLiteral("\r\n<h5>\r\n    Publish news\r\n</h5>\r\n<hr>\r\n\r\n");
             EndContext();
             BeginContext(98, 1024, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13b59ad3240943b2bfca2136384eb766", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1373812a580340a280f504b74bee3139", async() => {
                 BeginContext(158, 957, true);
                 WriteLiteral(@"
     <div class=""row"">
