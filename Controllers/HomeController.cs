@@ -31,7 +31,7 @@ namespace Coun.Controllers
                 ViewBag.ImportantNews = _db.NewsModels.OrderByDescending(x => x.Id).Skip(1).ToArray().Take(3);
                 ViewBag.guestHouse = _db.GuestHousesModels.ToArray();
                 ViewBag.advertise = _db.LinkModels.Where(x => x.Catogary == "advertisement").ToArray().Take(4);
-                ViewBag.Form = _db.LinkModels.Where(x => x.Catogary == "forms").ToArray().Take(6);
+                ViewBag.Form = _db.LinkModels.Where(x => x.Catogary == "forms").ToArray().Take(10);
                 ViewBag.mission = _db.LinkModels.Where(x => x.Catogary == "vs").ToArray();
                 ViewBag.conciller = _db.CouncilModels.OrderByDescending(x => x.Id).First();
                 ViewBag.cafey = _db.CafeyModels.ToArray();
