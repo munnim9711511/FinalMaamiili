@@ -237,23 +237,23 @@ ViewData["Title"] = "Home Page";
                     {
                         var xc = item .ImgUrl.Split(',');
                              <div class="col m3 s12">
-                                   <!-- <div class="card">
-                                    <div class="card-image"> -->
+                                   <div class="card">
+                                    <div class="card-image">
                             @for (int i = 0; i < 1; i++)
                             {
                                
                               
-                                    <img src="~/gallery/@xc[i]">
+                                    <img src="~/gallery/@xc[i]" class=" responsive-img " style="width: 337px;height: 206px;">
                                    
                                    
                                
                             }
-                             <!-- </div>
+                             </div>
                                  
-                                    <div class="card-action center-align"> -->
+                                    <div class="card-action center-align">
                                     <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="dh">@item.Title</a>
-                                    <!-- </div>
-                                </div> -->
+                                    </div>
+                                </div>
                             
                                 </div>
 
