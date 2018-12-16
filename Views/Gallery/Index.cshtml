@@ -19,15 +19,15 @@
 
                             @for (int i = 0; i < 1; i++)
                             {
-                                <div class="col m3 s12">
-                                <div class="card">
-                                    <div class="card-image">
-                                    <img src="~/gallery/@xc[i]">
+                                <div class="col m3 s12 right">
+                                <div class="">
+                                    <div class="">
+                                    <img src="~/gallery/@xc[i]"  class=" responsive-img " style="border-radius: 15px;">
                                    
                                     </div>
                                  
-                                    <div class="card-action col  s12">
-                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="">@item.Title</a>
+                                    <div class=" col  s12 right-align">
+                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="" style="direction: rtl;font-weight: bold;">@item.Title</a>
                                     </div>
                                 </div>
                                 </div>

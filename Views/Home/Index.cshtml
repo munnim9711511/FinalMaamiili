@@ -25,7 +25,7 @@ ViewData["Title"] = "Home Page";
 
 
 
-            <div class="col m12 s12"><img src="~/newsImage/@item.ImgUrl" class=" responsive-img" style="width: 600px;height: 281px;"></div>
+            <div class="col m12 s12"><img src="~/newsImage/@item.ImgUrl" class=" responsive-img" ></div>
 
             <div class="col s12 right-align" style="padding: 5px;"><a class="dh right-align" style="font-size: 29px;font-weight: bolder;"
                     href="@Url.Action("Index","News",new{id=@item.Id})">@item.Title</a>
@@ -238,14 +238,14 @@ ViewData["Title"] = "Home Page";
                     {
                         var xc = item .ImgUrl.Split(',');
                             
-                                  <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">     
+                                  <div class="col s12 m4 right">
+      <div class="#e0e0e0 grey lighten-2" >
+        <div class="" >     
                             @for (int i = 0; i < 1; i++)
                             {
                                
                             
-                                    <img src="~/gallery/@xc[i]" class=" responsive-img "  >
+                                    <img src="~/gallery/@xc[i]" class=" responsive-img " style="border-radius: 15px;"  >
 
                               
                                    
@@ -253,13 +253,11 @@ ViewData["Title"] = "Home Page";
                                
                             }
                             </div>
-        <div class="card-content">
-                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="dh">@item.Title</a>
+        <div class="card-content right">
+                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="dh" style="direction: rtl;font-weight: bold" >@item.Title</a>
          
         </div>
-        <div class="card-action">
-       @item.Date
-        </div>
+      
       </div>
     </div>
                              <!-- </div>
