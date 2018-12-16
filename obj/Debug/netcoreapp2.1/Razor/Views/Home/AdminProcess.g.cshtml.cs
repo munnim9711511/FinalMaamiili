@@ -57,7 +57,7 @@ using Coun.Models;
             WriteLiteral("<div class=\"\">\n<div class=\"container\">\n    <br>\n    <h5 class=\"dh  right-align\" style=\"font-weight: bold;\">އިދާރީ އޮނިގަނޑު</h5>\n    <hr>\n    <div class=\"row  \">\n        <div class=\"col m8 pull-m2 s12 right\">\n            ");
             EndContext();
             BeginContext(221, 99, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "94e1a6de0c524db5889246a294b47b5e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "9a879d380fa743038bdd0cdaeab9aae1", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

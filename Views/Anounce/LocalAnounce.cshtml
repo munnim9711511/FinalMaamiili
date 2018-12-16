@@ -1,4 +1,4 @@
-<div class="card">
+<div class="">
 <div class="container">
     <br>
     <h5 class="dh right-align">އަމިއްލަފަރާތް  ތަކުގެ އިޢުލާންތައް</h5>
@@ -8,7 +8,9 @@
 <ul class="right-align">
     @foreach (var item in ViewBag.publican)
     {
-        <li class="dh" style="direction: rtl;"><a href="~/AnounceDoc/@item.DocUrl" tabindex="blank">
+        <li class="dh" style="direction: rtl;">
+            
+            <a href="~/anounceDoc/@item.DocUrl" tabindex="blank" style="font-size: 1.4em;">
         
          <img src="~/images/icon/red-circle-with-pdf-icon-png-20.png" style="width: 25px;padding-left: 5px;">
         @item.Title

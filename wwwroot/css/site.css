@@ -92,7 +92,12 @@ body {
     font-size: 1.5em;
     /* line-height: 5px; */
 }
-
+.news-parag-sub {
+    text-align: justify;
+    direction: rtl;
+    font-size: 1.3em;
+    line-height: 28px;
+}
 .collection .collection-item {
     background-color: #fff;
     line-height: 2.5rem;

@@ -19,12 +19,12 @@ namespace Coun.Controllers {
         }
 
         public IActionResult OrganizationAnounce () {
-            ViewBag.organization = _db.anouncementsModels.Where(x=>x.Catogary == "organization").OrderBy (x => x.Id).ToArray ();
+            ViewBag.organization = _db.anouncementsModels.Where(x=>x.Catogary == "organization").OrderByDescending (x => x.Id).ToArray ();
 
             return View (ViewBag);
         }
         public IActionResult LocalAnounce () {
-            ViewBag.publican = _db.anouncementsModels.Where(x=>x.Catogary == "public").OrderBy (x => x.Id).ToArray ();
+            ViewBag.publican = _db.anouncementsModels.Where(x=>x.Catogary == "LocalAnounce").OrderByDescending (x => x.Id).ToArray ();
 
             return View (ViewBag);
         }
