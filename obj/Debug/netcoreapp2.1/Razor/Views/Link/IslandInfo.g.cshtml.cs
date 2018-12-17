@@ -58,7 +58,7 @@ using Coun.Models;
             WriteLiteral("<div class=\"container center\">\n\n<div class=\"row\">\n<h4 class=\"dh newsHeading \" style=\"direction: rtl;\">\n  ރަށުގެ ތައާރަފް \n</h4>\n<div class=\"col s12 center\">\n    ");
             EndContext();
             BeginContext(161, 162, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f6d21123c67644aa94ee4a137824f481", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a1ddb1317aac4798b08af116e2ae55aa", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

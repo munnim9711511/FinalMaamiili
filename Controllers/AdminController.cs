@@ -420,5 +420,14 @@ namespace Coun.Controllers
             return Json(_db.BussinessModels);
         }
 
+        [HttpDelete]
+        public IActionResult DeleteInfo(string id)
+        {
+            dynamic a = new BussinessModel { Id = int.Parse(id) };
+            _db.BussinessModels.Remove(a);
+            _db.SaveChanges();
+            return Ok();
+        }
+
     }
 }

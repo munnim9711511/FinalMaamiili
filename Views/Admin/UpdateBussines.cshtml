@@ -6,9 +6,20 @@
       <table>
          <tr ng-repeat="x in busiData">
              <td >
-                 {{x.id}}
+                 {{x.bussinessName}}
              </td>
-             
+             <td>
+                {{x.bussinessAddress}}
+             </td>
+             <td>
+                 {{x.bussinessTyp}}
+             </td>
+             <td>
+                 {{x.contactNumber}}
+             </td>
+             <td>
+                 <button id={{x.id}} ng-click="DeleteData($event)">Delete</button>
+             </td>
          </tr>
       </table>
      
