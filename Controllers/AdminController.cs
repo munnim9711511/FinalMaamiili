@@ -53,7 +53,7 @@ namespace Coun.Controllers
         [DisableRequestSizeLimit]
         public IActionResult Gallery(GalleryModel galleryM, List<IFormFile> gpic)
         {
-          
+
             if (gpic != null)
             {
                 long size = gpic.Sum(f => f.Length);
@@ -67,14 +67,14 @@ namespace Coun.Controllers
 
                         var fileName = Path.Combine(he.WebRootPath + "/gallery", Path.GetFileName(formFile.FileName));
                         formFile.CopyTo(new FileStream(fileName, FileMode.Create));
-                      
+
 
 
 
                     }
-                      galleryM.ImgUrl += formFile.FileName +",";
-                        // galleryM.ImgUrl = ;
-                        galleryM.Date = DateTime.UtcNow.Date;
+                    galleryM.ImgUrl += formFile.FileName + ",";
+                    // galleryM.ImgUrl = ;
+                    galleryM.Date = DateTime.UtcNow.Date;
 
 
 
@@ -399,6 +399,25 @@ namespace Coun.Controllers
 
             }
             return View("Calander");
+        }
+
+        [HttpPost]
+        public IActionResult UpdateBussines(BussinessModel bs)
+        {
+            _db.BussinessModels.Add(bs);
+            _db.SaveChanges();
+            return View("Bussiness");
+        }
+        [HttpGet]
+        public IActionResult UpdateBussines()
+        {
+
+            return View();
+        }
+        [HttpGet]
+        public IActionResult GetAllBusData()
+        {
+            return Json(_db.BussinessModels);
         }
 
     }

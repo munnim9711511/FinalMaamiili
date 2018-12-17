@@ -1,15 +1,13 @@
 var app = angular.module("app", []);
-app.controller("updateNews", ($scope,$http)=>{
-    $scope.Info ;
-    $scope.name = "shahu";
-    $http.get("/admin/getInfo").then((data)=>{
-        
-         Info = data.data;
-         console.log(Info);
-       
-    });
-    
+app.controller("adminControll",function($scope,$http){
+
+  $scope.busiData;
+  $http.get("GetAllBusData").then(
+    function(data){
+     $scope.busiData = data.data;
+     console.log($scope.busiData);
+    }
+  )
 
 
-  }
-);
+});
