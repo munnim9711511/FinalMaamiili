@@ -22,13 +22,13 @@
                                 <div class="col m3 s12 right">
                                 <div class="card">
                                     <div class="card-image">
-                                      <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})">
-                                            <img src="~/gallery/@xc[i]"  class=" responsive-img " >
-                                      </a>
-                                  
+                                    <img src="~/gallery/@xc[i]"  class=" responsive-img " >
                                    
                                     </div>
                                  
+                                    <div class="card-action col  s12 right-align">
+                                    <a href="@Url.Action("GallerySlider","Home",new{id=@item.Title})" class="" style="direction: rtl;font-weight: bold;">@item.Title</a>
+                                    </div>
                                 </div>
                                 </div>
                                
