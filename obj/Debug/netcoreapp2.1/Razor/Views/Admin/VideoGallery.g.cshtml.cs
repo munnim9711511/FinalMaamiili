@@ -60,7 +60,7 @@ using Coun.Models;
             WriteLiteral("<div class=\"container\">\n    <div class=\"col m4 s12\">\n        ");
             EndContext();
             BeginContext(115, 439, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05d9ddf9fa1a45888d31b2661e5a8045", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b0eac95364e4091b458ede88fe322ba", async() => {
                 BeginContext(121, 426, true);
                 WriteLiteral(@"
             <div class=""row"">

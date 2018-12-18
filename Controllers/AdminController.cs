@@ -428,6 +428,11 @@ namespace Coun.Controllers
             _db.SaveChanges();
             return Ok();
         }
+        [HttpGet]
+        public IActionResult GetBussinessDat(int id)
+        {
+            return Content(id.ToString());
+        }
 
     }
 }

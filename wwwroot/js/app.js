@@ -6,14 +6,14 @@ app.controller("adminControll", function($scope, $http) {
     console.log($scope.busiData);
   });
   $scope.DeleteData = function(event) {
-    $http.delete(`DeleteInfo/${event.currentTarget.id}`).then(
-      function(data) {
-        $http.get("GetAllBusData").then(function(data) {
-          $scope.busiData = data.data;
-        });
-      },
-      function(err) {}
-    );
+    // $http.delete(`DeleteInfo/${event.currentTarget.id}`).then(
+    //   function(data) {
+    //     $http.get("GetAllBusData").then(function(data) {
+    //       $scope.busiData = data.data;
+    //     });
+    //   },
+    //   function(err) {}
+    // );
     console.log(event);
   };
 });
