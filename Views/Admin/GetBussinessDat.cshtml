@@ -1,0 +1,40 @@
+@{
+    Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form action="@Url.Action("GetBussinessDat","Admin")" method="post" enctype="multipart/form-data">
+<div class="row">
+    @foreach (var item in ViewBag.info)
+    {
+        <input type="text" value="@item.Id" name="Id" class="hide">
+           <div class="col m6 s12 input-field">
+        <input  name="BussinessName"  type="text" value="@item.BussinessName">
+        <label  class="dh" for="" >ވިޔަފާރި ނަން</label>
+    </div>
+      <div class="col m6 s12 input-field">
+        <input  name="BussinessTyp"  type="text"  value="@item.BussinessTyp">
+        <label  class="dh" for="">ވިޔަފާރޫގެ ބާވަތް</label>
+    </div>
+      <div class="col m6 s12 input-field">
+        <input  name="BussinessAddress"  type="text" value="@item.BussinessAddress">
+        <label  class="dh" for="">  ވިޔަފާރީ ކުރަމުން ގެނދާ ތަނުގެ އެޑްރެސް</label>
+    </div>
+      <div class="col m6 s12 input-field">
+        <input  name="RoadBusisnessLoc"  type="text" value="@item.RoadBusisnessLoc">
+        <label  class="dh" for="">  ވިޔަފާރީ ކުރަމުން ގެނދާ ޔަން ހުންނަ މަގު </label>
+    </div>
+       <div class="col m6 s12 input-field">
+        <input  name="PermisionGivenBy"  type="text" value="@item.PermisionGivenBy">
+        <label  class="dh" for="">  ވިޔަފާރީ ކުރުމަށް ކުރުމަށް ހުއްދަދެއްވި ފާރާތް </label>
+    </div>
+         <div class="col m6 s12 input-field">
+        <input  name="ContactNumber"  type="text" value="@item.ContactNumber">
+        <label  class="dh" for=""> ވިޔަފާރީ ކުރާ ފަރާތުގެ ނަމްބަރު </label>
+    </div>
+    }
+ 
+    
+</div>
+<button class="dh btn">އަޕްލޯޑް</button>
+
+</form>

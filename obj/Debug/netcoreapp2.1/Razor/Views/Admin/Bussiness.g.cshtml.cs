@@ -63,7 +63,7 @@ Layout="~/Views/Shared/_AdminLayout.cshtml";
             WriteLiteral("\n<h5 class=\"dh right-align\">\n   ވިޔަފާރި ކުރާ ފަރާތް ތަކުގެ ނަން\n</h5>\n<hr>\n");
             EndContext();
             BeginContext(126, 1244, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e2779bb7f6234bb39ad7085f5736db54", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84f6334d65ea41aca40a4d9e0f8d57ac", async() => {
                 BeginContext(200, 1163, true);
                 WriteLiteral(@"
 <div class=""row"">
