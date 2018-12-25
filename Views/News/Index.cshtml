@@ -9,6 +9,14 @@
                           @foreach (var item in ViewBag.news)
 {
 
+
+    @section metadata {
+        <meta property="og:title" content=@item.Title>
+        <meta property="og:description" content=@item.Title>
+        <meta property="og:image" content="http://maamigilicouncil.gov.mv/newsImage/@item.ImgUrl">
+        <meta property="og:url" content="http://maamigilicouncil.gov.mv/News/Index/@item.Id">
+    }
+
     <h5 class="dh right-align newsHeading" style="line-height: 1.5">@item.Title</h5>
     <div class="col s12 center">
     <img  src="~/newsImage/@item.ImgUrl" class=" responsive-img center-align"  height="484px" width="750px"/>
