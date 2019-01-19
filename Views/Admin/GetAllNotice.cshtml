@@ -1,0 +1,70 @@
+@{
+Layout="~/Views/Shared/_AdminLayout.cshtml";
+}
+<h4>
+    Update Anouncements
+</h4>
+<hr>
+<div class="container" ng-controller="adminControll">
+
+    @foreach(var item in ViewBag.data)
+    {
+        <li>
+              <a class="modal-trigger" data-target="modal1" href="" id=@item.Id ng-click="getData($event)">
+        @item.Title
+
+    </a>
+        </li>
+  
+
+    }
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content"  ng-repeat="x in AnData">
+
+
+            <form action="@Url.Action("UpdateAnounc","Admin")" method="POST" enctype="multipart/form-data">
+               
+               <input class="hiden" name="Id"  value="{{x.id}}">
+                <div class="row">
+                    <div class="col m10 input-field ">
+                        <input type="text" style="font-family: Faruma;direction: rtl"  value="{{x.title}}" name="Title" required />
+                        <label class="dh right-align">ސުރުހީ</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m10  ">
+                        <label class="dh right-align">ފައިލް</label>
+                        <br>
+                        <input type="file" name="Doc" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m10 ">
+                        <label for="" class="dh right-align">ކެޓަގަރީ</label>
+                        <br>
+                        <select name="Catogary" required class="browser-default" >
+                            <option value="LocalAnounce" class="dh right-align">އަމިއްލަ ފަރާތްތަކުގެ</option>
+                            <option value="organization" class="dh right-align">ޖަމިއްޔާ</option>
+                            <option value="council" class="dh right-align">ކައުންސިލް</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="upload" class="btn" />
+                </div>
+        </div>
+        </form>
+        <br>
+        <br>
+    </div>
+
+</div>
+</div>
+<script>
+      $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>

@@ -23,6 +23,7 @@ $(() => {
     });
 
     $('.carousel').carousel();
+    $('.modal').modal();
 
 
 });

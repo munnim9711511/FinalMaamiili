@@ -89,7 +89,7 @@ Write(ViewData["Title"]);
             WriteLiteral("                                <div class=\"col m3 s12 right\">\r\n                                <div class=\"card\">\r\n                                    <div class=\"card-image\">\r\n                                    ");
             EndContext();
             BeginContext(749, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "2414ba4bbd51409bb7966fd33da4d74c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "dfd0452d4898488389c587cfc0953165", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -39,24 +39,24 @@ namespace Coun.Controllers {
         }
 
         [HttpGet]
-        // public async Task<IActionResult> RegisterAdmin () {
-        //     // first we create Admin rool
-        //     dynamic role = new IdentityRole ();
-        //     role.Name = "Administrator";
-        //     await _roleManager.CreateAsync (role);
+        public async Task<IActionResult> RegisterAdmin () {
+            // first we create Admin rool
+            dynamic role = new IdentityRole ();
+            role.Name = "Administrator";
+            await _roleManager.CreateAsync (role);
 
-        //     var user = new IdentityUser {
-        //         UserName = "admin"
-        //     };
-        //     // return Content ("user created");
-        //     var result = await _userManager.CreateAsync (user, "Hellow@1234@M");
-        //     //Here we create a Admin super user who will maintain the website    
-        //     if (result.Succeeded) {
-        //         var result1 = await _userManager.AddToRoleAsync (user, "Administrator");
-        //     }
+            var user = new IdentityUser {
+                UserName = "admin"
+            };
+            // return Content ("user created");
+            var result = await _userManager.CreateAsync (user, "Hellow@1234@M");
+            //Here we create a Admin super user who will maintain the website    
+            if (result.Succeeded) {
+                var result1 = await _userManager.AddToRoleAsync (user, "Administrator");
+            }
 
-        //     return Content ("user created");
-        // }
+            return Content ("user created");
+        }
 
         [HttpGet]
         public IActionResult Logout () {
@@ -75,6 +75,6 @@ namespace Coun.Controllers {
             return RedirectToAction ("Index", "Admin");
             // return Json(user);
         }
-
+      
     }
 }
