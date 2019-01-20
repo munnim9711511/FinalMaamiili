@@ -381,25 +381,28 @@ namespace Coun.Controllers {
 
         [HttpGet]
         public IActionResult GetAllNotice () {
-            ViewBag.data = _db.anouncementsModels.ToArray();
+            ViewBag.data = _db.anouncementsModels.ToArray ();
             return View (ViewBag);
         }
 
         [HttpGet]
         public object GetallData (int id) {
 
-            return _db.anouncementsModels.Where (x => x.Id == id).ToArray();
+            return _db.anouncementsModels.Where (x => x.Id == id).ToArray ();
 
         }
 
         [HttpPost]
         public IActionResult UpdateAnounc (AnouncementsModel anounc, IFormFile Doc) {
             if (Doc != null) {
-                var fileName = Path.Combine (he.WebRootPath + "/anounceDoc", Path.GetFileName(Doc.FileName));
+                dynamic data1 = _db.anouncementsModels.Where (x => x.Id == anounc.Id).FirstOrDefault();
+                var fileName = Path.Combine (he.WebRootPath + "/anounceDoc", Path.GetFileName (Doc.FileName));
                 Doc.CopyTo (new FileStream (fileName, FileMode.Create));
+                data1.Title = anounc.Title;
                 anounc.DocUrl = Path.GetFileName (Doc.FileName);
-                anounc.Date = DateTime.Now.Day.ToString () + "/" + DateTime.Now.Month.ToString () + "/" + DateTime.Now.Year.ToString ();
-                _db.anouncementsModels.Update (anounc);
+                data1.DocUrl = anounc.DocUrl;
+                // anounc.Date = DateTime.Now.Day.ToString () + "/" + DateTime.Now.Month.ToString () + "/" + DateTime.Now.Year.ToString ();
+                
                 _db.SaveChanges ();
 
             }
